@@ -7,6 +7,21 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Installation process
+
+- Execute `composer install` in your command line, to install all the packages used in the project
+- create the `.env` file
+- Use `php artisan key:generate`
+- execute the migration and the user seed with the follow command: `php artisan migrate --seed`
+- Create and assign admin privileges to the user with the command: `php artisan voyager:admin your@email.com`
+- Run the voyager seeders: `php artisan db:seed --class=VoyagerDatabaseSeeder`
+- Run `php artisan hook:setup` to install the hooks system.
+- Run `php artisan storage:link` to create the storage symlink to your public folder.
+
+    Finally, run `composer dump-autoload` to finish your installation!
+
+After this last step, you can run the app with the `php artisan serve` command
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
