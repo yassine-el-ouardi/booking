@@ -9,7 +9,7 @@
 
 ## Installation process
 
-- Execute `composer install` and `composer voyager:install` in your command line, to install all the packages used in the project
+- Execute `composer install` and `php artisan voyager:install` in your command line, to install all the packages used in the project
 - create the `.env` file
 - Use `php artisan key:generate`
 - execute the migration and the user seed with the follow command: `php artisan migrate --seed`
