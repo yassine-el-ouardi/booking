@@ -5,13 +5,13 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
     <!-- ========== SEO ========== -->
-    <title>Hotel Himara - Hotel HTML Template</title>
+    <title>EasyBooking</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta content="" name="author">
     <!-- ========== FAVICON ========== -->
     <link rel="apple-touch-icon-precomposed" href="styling/images/favicon-apple.png"/>
-    <link rel="icon" href="styling/images/favicon.png">
+    <link rel="icon" href="styling/images/007.ico">
     <!-- ========== STYLESHEETS ========== -->
     <link rel="stylesheet" href="styling/css/bootstrap.min.css">
     <link rel="stylesheet" href="styling/css/bootstrap-select.min.css">
@@ -37,7 +37,7 @@
       <div class="loader-inner">
         <div class="spin">
           <span></span>
-          <img src="styling/images/logo.svg" alt="Hotel Himara">
+          <img src="styling/images/favicon-apple.png" alt="EasyBooking">
         </div>
       </div>
     </div>
@@ -49,39 +49,20 @@
       <div class="topbar">
         <div class="container">
           <div class="welcome-mssg">
-            Welcome to Hotel Himara.
+            Welcome to EasyBooking.
           </div>
           <div class="top-right-menu">
             <ul class="top-menu">
               <li class="d-none d-md-inline">
-                <a href="tel:+18881234567">
-                  <i class="fa fa-phone"></i>+1 888 123 4567
+                <a href="tel:+212600000000">
+                  <i class="fa fa-phone"></i>+212600000000
                 </a>
               </li>
               <li class="d-none d-md-inline">
-                <a href="mailto:contact@hotelhimara.com">
-                  <i class="fa fa-envelope-o "></i>contact@hotelhimara.com</a>
+                <a href="mailto:contact@easybooking.com">
+                  <i class="fa fa-envelope-o "></i>contact@easybooking.com</a>
               </li>
-              <li class="language-menu">
-                <a href="#" class="active-language"><img src="styling/images/icons/flags/gb.png" alt="Image">English</a>
-                <ul class="languages">
-                  <li class="language">
-                    <a href="#"><img src="styling/images/icons/flags/it.png" alt="Image">Italiano</a>
-                  </li>
-                  <li class="language">
-                    <a href="#"><img src="styling/images/icons/flags/gr.png" alt="Image">Ελληνικα</a>
-                  </li>
-                  <li class="language">
-                    <a href="#"><img src="styling/images/icons/flags/al.png" alt="Image">Shqip</a>
-                  </li>
-                  <li class="language">
-                    <a href="#"><img src="styling/images/icons/flags/fr.png" alt="Image">Français</a>
-                  </li>
-                  <li class="language">
-                    <a href="#"><img src="styling/images/icons/flags/es.png" alt="Image">Español</a>
-                  </li>
-                </ul>
-              </li>
+              
             </ul>
           </div>
         </div>
@@ -93,7 +74,7 @@
           <div class="brand">
             <div class="logo">
               <a href="index.html">
-                <img src="styling/images/logo.svg" alt="Hotel Himara">
+                <img src="styling/images/logo.svg" alt="easyBooking">
               </a>
             </div>
           </div>
@@ -108,32 +89,6 @@
             <ul class="menu">
               <li class="menu-item dropdown active">
                 <a href="#">HOME</a>
-                <ul class="submenu">
-                  <li class="menu-item">
-                    <a href="index.html">Home Version 1</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="index2.html">Home Version 2</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="index3.html">Home Version 3</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="index4.html">Home Version 4</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="index5.html">Home Version 5</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="index6.html">Home Version 6</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="index7.html">Home Version 7</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="index8.html">Home Version 8</a>
-                  </li>
-                </ul>
               </li>
               <li class="menu-item dropdown">
                 <a href="#">ROOMS</a>
@@ -482,7 +437,7 @@
                 data-lineheight="16"
                 data-whitespace="nowrap"
                 data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                style="z-index: 6; color: #fff;">Live Your Myth In Hotel Himara</div>
+                style="z-index: 6; color: #fff;">Live Your Myth With EasyBooking</div>
               <!-- LAYER NR. 3 -->
               <div
                 class="tp-caption"
@@ -549,7 +504,7 @@
             <!-- SLIDE NR. 2 -->
             <li data-transition="crossfade">
               <!-- MAIN IMAGE -->
-              <img src="styling/images/slider/slider3.jpg" alt="Image" title="Image" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
+              <img src="styling/images/slider/slider2.jpg" alt="Image" title="Image" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
               <!-- LAYER NR. 1 -->
               <div
                 class="tp-caption tp-resizeme"
@@ -582,7 +537,7 @@
             <!-- SLIDE NR. 3 -->
             <li data-transition="crossfade">
               <!-- MAIN IMAGE -->
-              <img src="styling/images/slider/slider13.jpg" alt="Image" title="Image" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
+              <img src="styling/images/slider/slider3.jpg" alt="Image" title="Image" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
               <!-- LAYER NR. 1 -->
               <div
                 class="tp-caption tp-resizeme"
@@ -736,7 +691,7 @@
           <div class="row">
             <div class="col-lg-8">
               <div class="section-title">
-                <h4 class="text-uppercase">Hotel Himara. since 1992</h4>
+                <h4 class="text-uppercase">EasyBooking. since 1992</h4>
                 <p class="section-subtitle">High quality accommodation services</p>
               </div>
               <div class="info-branding">
@@ -776,7 +731,7 @@
               <div class="brand-info">
                 <div class="inner">
                   <div class="content">
-                    <img src="styling/images/logo-big-transparent.svg" width="100" alt="Image">
+                    <img src="styling/images/logo-big-transparent.svg" width="100%" alt="Image">
                     <div class="stars">
                       <i class="fa fa-star" aria-hidden="true"></i>
                       <i class="fa fa-star" aria-hidden="true"></i>
@@ -876,7 +831,7 @@
       <section class="services">
         <div class="container">
           <div class="section-title">
-            <h4>HIMARA. SERVICES</h4>
+            <h4>EasyBooking. SERVICES</h4>
             <p class="section-subtitle">Check out our awesome services</p>
           </div>
           <div class="row">
@@ -955,7 +910,7 @@
       <section class="gallery">
         <div class="container">
           <div class="section-title">
-            <h4>HIMARA. GALLERY</h4>
+            <h4>EasyBooking. gallery</h4>
             <p class="section-subtitle">Check out our image gallery</p>
             <a href="gallery.html" class="view-all">View gallery images</a>
           </div>
@@ -1248,7 +1203,7 @@
       <section class="restaurant image-bg parallax gradient-overlay op5" data-src="styling/images/restaurant.jpg" data-parallax="scroll" data-speed="0.3" data-mirror-selector=".wrapper" data-z-index="0">
         <div class="container">
           <div class="section-title">
-            <h4>HIMARA. RESTAURANT</h4>
+            <h4>EasyBooking. RESTAURANT</h4>
             <p class="section-subtitle">Live a gourmet dining experience</p>
             <a href="restaurant.html" class="view-all uppercase">More About Our Restaurant</a>
           </div>
@@ -1383,7 +1338,7 @@
                 </figure>
                 <div class="news-info">
                   <h4 class="title">
-                    <a href="blog-post.html">Honeymoon at Hotel Himara</a>
+                    <a href="blog-post.html">---------------------</a>
                   </h4>
                   <p>An examination of how the current political and economical climate is affecting the mental healthcare industry...</p>
                   <div class="post-meta">
@@ -1578,21 +1533,21 @@
               <ul class="contact-details">
                 <li>
                   <i class="fa fa-map-marker" aria-hidden="true"></i>
-                  Lorem ipsum dolor, 25, Himara</li>
+                  Lorem ipsum dolor, 25, EasyBooking</li>
                 <li>
                   <i class="fa fa-phone" aria-hidden="true"></i>
-                  Phone: +1 888 123 4567
+                  Phone: +212600000000
                 </li>
                 <li>
                   <i class="fa fa-fax"></i>
-                  Fax: +1 888 123 4567</li>
+                  Fax: +212600000000</li>
                 <li>
                   <i class="fa fa-globe"></i>
-                  Web: www.hotelhimara.com</li>
+                  Web: www.easybooking.com</li>
                 <li>
                   <i class="fa fa-envelope"></i>
                   Email:
-                  <a href="mailto:info@site.com">contact@hotelhimara.com</a>
+                  <a href="mailto:info@site.com">contact@easybooking.com</a>
                 </li>
               </ul>
             </div>
@@ -1622,7 +1577,7 @@
       <section class="instgram">
         <div class="section-title aligncenter">
           <p class="section-subtitle">Check out some pictures from our instagram page
-            <a href="https://www.instagram.com/hotelhimara/" target="_blank">@hotelhimara</a>
+            <a href="https://www.instagram.com/EasyBooking/" target="_blank">@easyBooking</a>
           </p>
         </div>
         <div id="instafeed-gallery" class="owl-carousel instagram-owl"></div>
@@ -1635,7 +1590,7 @@
               <!-- WIDGET -->
               <div class="col-md-3">
                 <div class="footer-widget">
-                  <img src="styling/images/logo.svg" class="footer-logo" alt="Hotel Himara">
+                  <img src="styling/images/logo.svg" class="footer-logo" alt="easybooking">
                   <div class="inner">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, velit placeat assumenda incidunt dolorem aliquam!</p>
                     <a href="https://www.tripadvisor.com/" target="_blank">
@@ -1660,7 +1615,7 @@
                         <a href="blog-post.html">Are you ready to enjoy your holidays</a>
                       </li>
                       <li>
-                        <a href="blog-post.html">Honeymoon at Hotel Himara</a>
+                        <a href="blog-post.html">Honeymoon at -------------</a>
                       </li>
                       <li>
                         <a href="blog-post.html">Travel gift ideas for every type of traveler</a>
@@ -1688,7 +1643,7 @@
                         <a href="shop.html">Shop</a>
                       </li>
                       <li>
-                        <a href="gallery.html">Himara Gallery</a>
+                        <a href="gallery.html">EasyBooking Gallery</a>
                       </li>
                       <li>
                         <a href="location.html">Our Location</a>
@@ -1705,21 +1660,21 @@
                     <ul class="contact-details">
                       <li>
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        Lorem ipsum dolor, 25, Himara</li>
+                        Lorem ipsum dolor, 25, EasyBooking</li>
                       <li>
                         <i class="fa fa-phone" aria-hidden="true"></i>
-                        Phone: +1 888 123 4567
+                        Phone: +212600000000
                       </li>
                       <li>
                         <i class="fa fa-fax"></i>
-                        Fax: +1 888 123 4567</li>
+                        Fax: +212600000000</li>
                       <li>
                         <i class="fa fa-globe"></i>
-                        Web: www.hotelhimara.com</li>
+                        Web: www.easybooking.com</li>
                       <li>
                         <i class="fa fa-envelope"></i>
                         Email:
-                        <a href="mailto:info@site.com">contact@hotelhimara.com</a>
+                        <a href="mailto:info@site.com">contact@easybooking.com</a>
                       </li>
                     </ul>
                   </div>
@@ -1733,8 +1688,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6">
-                <div class="copyrights">&copy; 2018 Hotel Himara. Designed by
-                  <a href="https://eagle-themes.com/" target="_blank">Eagle-Themes</a>.</div>
+                <div class="copyrights">&copy; 2021 EasyBooking.</div>
               </div>
               <div class="col-md-6">
                 <div class="social-media">

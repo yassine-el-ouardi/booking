@@ -1,9 +1,4 @@
 /*=============================================================
-Template Name: Hotel Himara - Hotel HTML Template
-Author:        Eagle-Themes
-Author URI:    http://eagle-themes.com
-Version:       1.1.0
-===============================================================
 
     TABLE OF CONTENTS:
 
@@ -1983,7 +1978,7 @@ header.dark-header.header-fixed-top.scroll-header {
 
 header .brand {
   display: inline-block;
-  padding: 28px 0;
+  padding: 20px 0;
 }
 
 header .brand .logo {
@@ -6784,11 +6779,11 @@ section.restaurant .restaurant-menu-item .title span.price {
 .loader3 .spin span {
   position: absolute;
   border-radius: 100%;
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
   border-color: #edcb9a #efefef #efefef;
   -webkit-animation: loader3 2s infinite linear;
-  animation: loader3 2s infinite linear;
+  animation: loader3 0.5s infinite linear;
   left: 0;
   top: 0;
   width: inherit;
@@ -6800,8 +6795,8 @@ section.restaurant .restaurant-menu-item .title span.price {
 }
 
 .loader3 .spin img {
-  margin-top: 55px;
-  max-width: 90px;
+  margin-top: 27.5px;
+  max-width: 50px;
 }
 
 @-webkit-keyframes loader3 {
