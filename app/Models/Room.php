@@ -9,27 +9,55 @@ class Room extends Model
 {
     use HasFactory;
 
-    protected $fillable=['hotel_id','booking_id','floor','roomnumber','description','guestnumber'];
+    protected $fillable=['state'];
 
     public function hotel(){
         return $this-> belongsTo('App\Models\Hotel');
     }
 
-    public function booking(){
-        return $this->belongsTo('App\Models\Booking');
+    public function bookings(){
+        return $this->belongsToMany('App\Models\Booking');
     }
 
-    public function setStateAttribute(){
-        if ($this->attributes['booking_id']) {
 
 
-            $this->attributes['state']= 'booked';
+
+//    public function setStateAttribute($state){
 
 
-        }else{
-            $this->attributes['state']= 'not booked';
-        }
+//             $this->attributes['state']= $state;
+
+//     }
+
+    
+    // public function setStateAttribute(){
+    //     if ($this->attributes['booking_id']) {
+
+
+    //         $this->attributes['state']= 'booked';
+
+
+    //     }else{
+    //         $this->attributes['state']= 'not booked';
+    //     }
+
+
+    // public function setStateAttribute($roomid){
+    //     if (Booking::where('room_id',$roomid)->first()) {
+
+
+    //         $this->attributes['state']= 'booked';
+
+
+    //     }else{
+    //         $this->attributes['state']= 'not booked';
+    //     }
         
         
+    // }
+
+    public function images(){
+        return $this->morphToMany('App\Models\Image','imageable');
     }
+    
 }

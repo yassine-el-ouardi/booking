@@ -12,4 +12,8 @@ class Hotel extends Model
     public function city(){
         return $this->belongsTo('App\Models\City');
     }
+
+    public function images(){
+        return $this->morphToMany('App\Models\Image','imageable');
+    }
 }
