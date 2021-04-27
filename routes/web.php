@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\City;
+use App\Models\Guest;
+use App\Models\Reservationguest;
 use Illuminate\Support\Facades\Route;
 use TCG\Voyager\Facades\Voyager;
 
@@ -18,7 +21,25 @@ Route::get('/', function () {
     return view('main.index');
 });
 
+Route::get('/hotels', function () {
+    return view('main.hotels');
+});
+
+Route::get('/admin1',function(){
+    return view('admin.index');
+});
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+});
+
+Route::get('/test',function(){
+
+    $guest = Reservationguest::findOrFail(2);
+    $city = City::findOrFail(7);
+    $guest->city()->associate($city);
+    $guest->save();
+
+
+    // return view('welcome');
 });
