@@ -9,6 +9,8 @@ class Booking extends Model
 {
     use HasFactory;
 
+    protected $dates=['to'];
+
 
     public function rooms(){
         return $this->belongsToMany('App\Models\Room');

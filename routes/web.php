@@ -33,13 +33,3 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('/test',function(){
-
-    $guest = Reservationguest::findOrFail(2);
-    $city = City::findOrFail(7);
-    $guest->city()->associate($city);
-    $guest->save();
-
-
-    // return view('welcome');
-});

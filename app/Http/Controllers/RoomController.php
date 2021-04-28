@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Booking;
 use App\Models\Booking_room;
 use App\Models\Room;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -44,9 +45,31 @@ class RoomController extends VoyagerBaseController
     public function index(Request $request)
     {
 
+
+
+//-------------------------------------------------
+//              Updating booking state
+//-------------------------------------------------
+foreach(Booking::all() as $booking){
+    if($booking->to->lt(Carbon::now())){
+
+        $booking->state = 'no';
+        $booking->save();
+    }else{
+        $booking->state = 'yes';
+        $booking->save();
+    }
+
+}
+
+
+
 //-------------------------------------------------
 
 
+//-------------------------------------------------
+//              Updating room state
+//-------------------------------------------------
 
 foreach(Room::all() as $room)
 {
@@ -71,13 +94,7 @@ if($condition1 && Booking::where('id',$condition1->booking_id)->first()->state =
 
 }
 
-
-
-
-
-
 //------------------------------------------------------
-
 
 
 
