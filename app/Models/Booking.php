@@ -10,6 +10,7 @@ class Booking extends Model
     use HasFactory;
 
     protected $dates=['to'];
+    protected $fillable=['state'];
 
 
     public function rooms(){

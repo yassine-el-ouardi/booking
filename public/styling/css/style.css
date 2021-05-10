@@ -1,3 +1,19 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*=============================================================
 
     TABLE OF CONTENTS:
@@ -5374,7 +5390,7 @@ footer .subfooter .social-media a i {
 
 .room-reviews .rating i {
   color: #e3e3e3;
-  font-size: 13px;
+  font-size: 60px;
 }
 
 .room-reviews .rating i.voted {
@@ -7529,8 +7545,7 @@ margin-bottom: 15px;
 line-height: 18px;
 }
 .btn-search .btn {
-  background-color: #0de0fe;
-  border: 1px solid #0de0fe;
+
   color: #fff;
   height: 46px;
 font-weight:500;

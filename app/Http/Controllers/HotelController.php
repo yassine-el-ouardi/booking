@@ -8,4 +8,5 @@ use TCG\Voyager\Http\Controllers\VoyagerBaseController;
 class HotelController extends VoyagerBaseController
 {
     //
+
 }

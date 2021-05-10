@@ -4,6 +4,14 @@
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+
+
     <!-- ========== SEO ========== -->
     <title>EasyBooking</title>
     <meta content="" name="description">
@@ -624,6 +632,9 @@
     <script src="styling/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
     <script src="styling/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
     <script src="styling/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+
+
 
 
     </body>

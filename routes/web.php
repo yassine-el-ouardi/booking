@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Models\City;
 use App\Models\Guest;
 use App\Models\Reservationguest;
@@ -17,13 +18,15 @@ use TCG\Voyager\Facades\Voyager;
 |
 */
 
-Route::get('/', function () {
-    return view('main.index');
-});
+
+Route::get('/',[HomeController::class,'index']);
+
+Route::post('/search',[HomeController::class,'search'])->name('search');
+
 
 Route::get('/hotels', function () {
     return view('main.hotels');
-});
+})->name("hotels");
 
 Route::get('/admin1',function(){
     return view('admin.index');
@@ -32,4 +35,7 @@ Route::get('/admin1',function(){
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get('hotel',[HomeController::class,'hoteldetails']);
+
 

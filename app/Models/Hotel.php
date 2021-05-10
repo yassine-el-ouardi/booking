@@ -13,4 +13,5 @@ class Hotel extends Model
         return $this->belongsTo('App\Models\City');
     }
 
+
 }
