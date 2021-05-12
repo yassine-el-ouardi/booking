@@ -108,7 +108,7 @@
           <!-- BRAND -->
           <div class="brand">
             <div class="logo">
-              <a href="index.html">
+              <a href="{{ route('home') }}">
                 <img src="styling/images/logo.svg" alt="easyBooking">
               </a>
             </div>
@@ -123,7 +123,7 @@
           <nav id="main-menu" class="main-menu">
             <ul class="menu">
               <li class="menu-item dropdown active">
-                <a href="#">HOME</a>
+                <a href="">HOME</a>
               </li>
               <li class="menu-item dropdown">
                 <a href="#">ROOMS</a>
@@ -600,7 +600,7 @@
     </div>
     <!-- ========== JAVASCRIPT ========== -->
     <script src="styling/js/jquery.min.js"></script>
-    <script src="http://maps.google.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyDpQX1GivuLsfboZdnuZJf5Hm1wtNlwPLw&callback=initMap"></script>
     <script src="styling/js/bootstrap.min.js"></script>
     <script src="styling/js/bootstrap-select.min.js"></script>
     <script src="styling/js/jquery.mmenu.js"></script>

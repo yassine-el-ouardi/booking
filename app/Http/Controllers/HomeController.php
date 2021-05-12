@@ -26,49 +26,35 @@ class HomeController extends Controller
     }
 
     public function search(Request $request){
-        
 
-        $name = $request->input('name');
-        $date = $request->input('time_from');
-        $city = $request->input('city');
-        $childrenguests = $request->input('childrenguests');     
-        $adultguests = $request->input('adultguests');
-        $array = explode(" ",$date);
-        $from = Carbon::createFromFormat('d-m-Y',$array[0]);
-        $to = Carbon::createFromFormat('d-m-Y',$array[2]);
+    if ($request->isMethod('POST')) {        
+            $name = $request->input('name');
+            $date = $request->input('time_from');
+            $city = $request->input('city');
+            $childrenguests = $request->input('childrenguests');     
+            $adultguests = $request->input('adultguests');
+            $array = explode(" ",$date);
+            $from = Carbon::createFromFormat('d-m-Y',$array[0]);
+            $to = Carbon::createFromFormat('d-m-Y',$array[2]);
+            $rooms = Room::with('bookings')->whereHas('bookings',function($q) use ($to,$from){
+                $q->where('from', '>=', $to)->orWhere('to', '<=', $from);
+            })->orWhereDoesntHave('bookings')->get();
 
+            $hotels = collect();
+            foreach($rooms as $room){
+                if($room->hotel->city->ville  == $city){
+                $hotels->push($room->hotel);
+            }
+            }
 
-
-    if ($request->isMethod('POST')) {
-
-        $rooms = Room::with('bookings')->whereHas('bookings',function($q) use ($to,$from){
-            $q->where('from', '>=', $to)->orWhere('to', '<=', $from);
-        })->orWhereDoesntHave('bookings')->get();
-
-        $hotels = collect();
-        foreach($rooms as $room){
-            if($room->hotel->city->ville  == $city){
-            $hotels->push($room->hotel);
-        }
-        }
-
-        $hotels = $hotels->unique();
+            $hotels = $hotels->unique();
     }
     else{
-        $hotels = null; 
+        $hotels = collect(); 
     }
 
     $cities = City::all()->pluck('ville');
         return view('main.hotels',compact('hotels','cities'));
-
-
-
-// return $request->input();
-
-// return view('welcome',compact('hotels','rooms'));
-
-
-
 
     }
 
@@ -90,6 +76,26 @@ class HomeController extends Controller
     }
 
     public function test(){
-        return view('main.hotel');
+
+        return Hotel::all();
     }
+
+    public function roomdetails(Request $request){
+
+        $id = $request->id;
+        $room = Room::find($id);
+        $hotel = $room->hotel;
+        $rooms = Room::with('hotel')->whereHas('hotel',function($q) use($hotel){
+            $q->where('id',$hotel->id);
+        })->get();
+        return view('main.room',compact('room','hotel','rooms'));
+    }
+
+    public function rooms(){
+
+            $rooms = Room::paginate(3);
+            $N = Room::all()->count();
+        return view('main.listingrooms',compact('rooms','N'));
+    }
+
 }

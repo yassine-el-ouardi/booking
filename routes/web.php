@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Models\City;
 use App\Models\Guest;
 use App\Models\Reservationguest;
+use App\Models\Room;
 use Illuminate\Support\Facades\Route;
 use TCG\Voyager\Facades\Voyager;
 
@@ -19,9 +20,9 @@ use TCG\Voyager\Facades\Voyager;
 */
 
 
-Route::get('/',[HomeController::class,'index']);
+Route::get('/',[HomeController::class,'index'])->name('home');
 
-Route::post('/search',[HomeController::class,'search'])->name('search');
+Route::match(['GET','POST'],'/search',[HomeController::class,'search'])->name('search');
 
 
 Route::get('/hotels', function () {
@@ -39,3 +40,10 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('hotel',[HomeController::class,'hoteldetails']);
 
 
+Route::get('/contact',function(){
+    return view('main.contact');
+});
+
+Route::get('room',[HomeController::class,'roomdetails']);
+
+Route::get('rooms',[HomeController::class,'rooms']);
