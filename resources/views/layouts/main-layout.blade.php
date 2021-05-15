@@ -62,6 +62,10 @@
     <link href="styling/fonts/flaticon.css" rel="stylesheet">
     <!-- ========== GOOGLE FONTS ========== -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700%7CRoboto:100,300,400,400i,500,700" rel="stylesheet">
+
+
+    @livewireStyles
+
   </head>
   <body>
     <!-- ========== PRELOADER ========== -->
@@ -98,6 +102,21 @@
                 <a href="admin">
                   <i class="fa fa-user-circle "></i>login</a>
               </li>
+              {{-- <li>
+                <a href="admin">
+                  <i class="fas fa-shopping-cart"></i></a>
+              </li> --}}
+
+<li>
+                                          <!-- Single Wedge End -->
+                                          <a href="#offcanvas-cart"
+                                          class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                                          <i class="fas fa-shopping-cart"></i>
+                                          {{-- <span class="header-action-num">01</span> --}}
+                                          <!-- <span class="cart-amount">€30.00</span> -->
+                                      </a>
+</li>
+
             </ul>
           </div>
         </div>
@@ -122,315 +141,39 @@
           <!-- MAIN MENU -->
           <nav id="main-menu" class="main-menu">
             <ul class="menu">
-              <li class="menu-item dropdown active">
-                <a href="">HOME</a>
+              <li class="menu-item dropdown @yield('home')">
+                <a href="/">HOME</a>
               </li>
-              <li class="menu-item dropdown">
-                <a href="#">ROOMS</a>
-                <ul class="submenu">
-                  <li class="menu-item dropdown">
-                    <a href="#">Rooms</a>
-                    <ul class="submenu">
-                      <li class="menu-item">
-                        <a href="rooms-list.html">List View</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="rooms-grid.html">Grid View</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="rooms-block.html">Block View</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item dropdown">
-                    <a href="#">Room Details</a>
-                    <ul class="submenu">
-                      <li class="menu-item dropdown">
-                        <a href="#">Style 1</a>
-                        <ul class="submenu">
-                          <li class="menu-item">
-                            <a href="room.html">Right Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="room-left-sidebar.html">Left Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="room-full-width.html">Full Width</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="menu-item dropdown">
-                        <a href="#">Style 2</a>
-                        <ul class="submenu">
-                          <li class="menu-item">
-                            <a href="room-style2.html">Right Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="room-style2-left-sidebar.html">Left Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="room-style2-full-width.html">Full Width</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+
+
+              <li class="menu-item dropdown @yield('hotels')">
+                <a href={{ route('hotels') }}>HOTELS</a>
               </li>
-              <li class="menu-item dropdown">
-                <a href="#">BLOG</a>
-                <ul class="submenu">
-                  <li class="menu-item dropdown">
-                    <a href="#">Blog Archive</a>
-                    <ul class="submenu">
-                      <li class="menu-item dropdown">
-                        <a href="#">List View</a>
-                        <ul class="submenu">
-                          <li class="menu-item">
-                            <a href="blog.html">Right Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="blog-left-sidebar.html">Left Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="blog-full-width.html">Full Width</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="menu-item dropdown">
-                        <a href="#">Classic View</a>
-                        <ul class="submenu">
-                          <li class="menu-item">
-                            <a href="blog-classic.html">Right Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="blog-classic-left-sidebar.html">Left Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="blog-classic-full-width.html">Full Width</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="menu-item dropdown">
-                        <a href="#">Grid View</a>
-                        <ul class="submenu">
-                          <li class="menu-item">
-                            <a href="blog-grid.html">Right Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="blog-grid-left-sidebar.html">Left Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="blog-grid-full-width.html">Full Width</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item dropdown">
-                    <a href="#">Blog Post</a>
-                    <ul class="submenu">
-                      <li class="menu-item dropdown">
-                        <a href="#">Style 1</a>
-                        <ul class="submenu">
-                          <li class="menu-item">
-                            <a href="blog-post.html">Right Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="blog-post-left-sidebar.html">Left Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="blog-post-full-width.html">Full Width</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="menu-item dropdown">
-                        <a href="#">Style 2</a>
-                        <ul class="submenu">
-                          <li class="menu-item">
-                            <a href="blog-post-style2.html">Right Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="blog-post-style2-left-sidebar.html">Left Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="blog-post-style2-full-width.html">Full Width</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+
+
+              <li class="menu-item dropdown @yield('rooms')">
+                <a href={{ route('rooms') }}>ROOMS</a>
               </li>
-              <li class="menu-item dropdown">
-                <a href="#">PAGES</a>
-                <ul class="submenu">
-                  <li class="menu-item dropdown">
-                    <a href="#">Gallery</a>
-                    <ul class="submenu">
-                      <li class="menu-item">
-                        <a href="gallery.html">Gallery 4 Columns</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="gallery-3columns.html">Gallery 3 Columns</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="gallery-2columns.html">Gallery 2 Columns</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="gallery-without-filters.html">Gallery Without Filters</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="gallery-slider.html">Gallery Slider</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item dropdown">
-                    <a href="#">More Pages</a>
-                    <ul class="submenu">
-                      <li class="menu-item">
-                        <a href="places.html">Places</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="place-details.html">Place Details</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="events.html">Events</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="event-details.html">Event Details</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="offers.html">Offers</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="offer.html">Offer Details</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="staff.html">Our Staff</a>
-                      </li>
-                      <li class="menu-item dropdown">
-                        <a href="#">Loading Page</a>
-                        <ul class="submenu">
-                          <li class="menu-item">
-                            <a href="loading.html">Loading Page 1</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="loading-style2.html">Loading Page 2</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="loading-style3.html">Loading Page 3</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="menu-item dropdown">
-                        <a href="#">Coming Soon</a>
-                        <ul class="submenu">
-                          <li class="menu-item">
-                            <a href="coming-soon.html">Coming Soon Image</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="coming-soon-video.html">Coming Soon Video</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="menu-item">
-                        <a href="page.html">Right Sidebar Page</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="page-left-sidebar.html">Left Sidebar Page</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="page-full-width.html">Full Width Page</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="404.html">404 Style 1</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="404-style2.html">404 Style 2</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="testimonials.html">Testimonials</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item dropdown">
-                    <a href="#">Contact</a>
-                    <ul class="submenu">
-                      <li class="menu-item">
-                        <a href="contact.html">Contact Style 1</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="contact-style2.html">Contact Style 2</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item dropdown">
-                    <a href="#">Shop</a>
-                    <ul class="submenu">
-                      <li class="menu-item dropdown">
-                        <a href="#">Shop</a>
-                        <ul class="submenu">
-                          <li class="menu-item">
-                            <a href="shop.html">Right Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="shop-left-sidebar.html">Left Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="shop-full-width.html">Full Width</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="menu-item dropdown">
-                        <a href="#">Shop Details</a>
-                        <ul class="submenu">
-                          <li class="menu-item">
-                            <a href="shop-details.html">Right Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="shop-details-left-sidebar.html">Left Sidebar</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="shop-details-full-width.html">Full Width</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item">
-                    <a href="restaurant.html">Our Restaurant</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="spa.html">Our Spa</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="about-us.html">About Us</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="location.html">Our Location</a>
-                  </li>
-                </ul>
+
+
+
+
+
+
+
+              <li class="menu-item dropdown @yield('location')">
+                <a href={{ route('location') }}>LOCATION</a>
               </li>
-              <li class="menu-item dropdown">
-                <a href="#">ELEMENTS</a>
-                <ul class="submenu">
-                  <li class="menu-item">
-                    <a href="style-guide.html">Style Guide</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="buttons.html">Buttons</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="icons.html">Icons</a>
-                  </li>
-                </ul>
+              <li class="menu-item dropdown @yield('about')">
+                <a href={{ route('about') }}>ABOUT US</a>
               </li>
-              <li class="menu-item">
-                <a href="contact.html">CONTACT US</a>
+
+
+              <li class="menu-item @yield('contact')">
+                <a href={{ route('contact') }}>CONTACT US</a>
               </li>
               <li class="menu-item menu-btn">
-                <a href="booking-form.html" class="btn">
+                <a href={{ route('search') }} class="btn">
                   <i class="fa fa-calendar"></i>
                   BOOK ONLINE</a>
               </li>
@@ -443,6 +186,93 @@
 <div>
       @yield('body')
 </div>
+
+<div id="offcanvas-cart" class="offcanvas offcanvas-cart">
+  <div class="inner">
+      <div class="head">
+          <span class="title">Cart</span>
+          <button class="offcanvas-close">×</button>
+      </div>
+
+@livewire('cart1')
+
+
+<div class="foot">
+
+  @livewire('remove-from-cart')
+
+  {{-- <div class="buttons mt-30px">
+    <form action="{{ App\Http\Controllers\CartController::clearCart() }}">
+      <a href="cart.html" class="btn btn-dark btn-hover-primary mb-30px">clear cart</a>
+    </form> --}}
+
+    
+      <button href="checkout.html" class="btn btn-dark btn-hover-primary mb-30px">Pay</button>
+  </div>
+</div>
+
+</div>
+</div>
+
+
+
+    <!-- OffCanvas Cart Start -->
+    {{-- <div id="offcanvas-cart" class="offcanvas offcanvas-cart">
+      <div class="inner">
+          <div class="head">
+              <span class="title">Cart</span>
+              <button class="offcanvas-close">×</button>
+          </div>
+
+          @section('body')
+          @foreach (App\Http\Controllers\CartController::index() as $room)
+
+          <div class="room-grid-item">
+            <figure class="gradient-overlay-hover link-icon">
+              <a href="room.html">
+                <img src={{$room->associatedModel->drive_image ?? "images/rooms/deluxe/deluxe.jpg" }} class="img-fluid" alt="Image">
+              </a>
+              <form action="{{ route("remove") }}" method="post">
+                @csrf
+              <input type="hidden" name="id" value={{ $room->id }}>
+              <button type=submit>
+                <div class="room-edit">
+                <i>x</i>
+                </div>
+              </button>
+              </form>
+              <div class="room-price">{{ $room->associatedModel->price }} / night</div>
+            </figure>
+            <div class="room-info">
+              <h2 class="room-title">
+                <a href="room?id={{ $room->associatedModel->id }}">{{ $room->name }}</a>
+              </h2>
+              <p>in {{ $room->associatedModel->hotel->name }}</p>
+            </div>
+          </div>
+
+
+          @endforeach
+
+          <div class="foot">
+              <div class="buttons mt-30px">
+                <form action="{{ App\Http\Controllers\CartController::clearCart() }}">
+                  <a href="cart.html" class="btn btn-dark btn-hover-primary mb-30px">clear cart</a>
+                </form>
+                  <a href="checkout.html" class="btn btn-outline-dark current-btn">checkout</a>
+              </div>
+          </div>
+
+      </div>
+  </div> --}}
+  <!-- OffCanvas Cart End -->
+
+
+
+
+
+
+
 
       <!-- ========== INSTAGRAM ========== -->
       <section class="instgram">
@@ -460,11 +290,11 @@
           <div class="container">
             <div class="row">
               <!-- WIDGET -->
-              <div class="col-md-3">
+              <div class="col-md-5">
                 <div class="footer-widget">
                   <img src="styling/images/logo.svg" class="footer-logo" alt="easybooking">
                   <div class="inner">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, velit placeat assumenda incidunt dolorem aliquam!</p>
+                    <p>Founded in 1996 in Agadir, EasyBooking.com has grown from a small Dutch startup to one of the world’s leading digital travel companies.</p>
                     <a href="https://www.tripadvisor.com/" target="_blank">
                       <div class="tripadvisor-banner">
                         <span class="review">Recommended</span>
@@ -475,7 +305,7 @@
                 </div>
               </div>
               <!-- WIDGET -->
-              <div class="col-md-3">
+              {{-- <div class="col-md-3">
                 <div class="footer-widget">
                   <h3>LATEST NEWS</h3>
                   <div class="inner">
@@ -498,7 +328,7 @@
                     </ul>
                   </div>
                 </div>
-              </div>
+              </div> --}}
               <!-- WIDGET -->
               <div class="col-md-3">
                 <div class="footer-widget">
@@ -512,10 +342,10 @@
                         <a href="contact.html">Contact Us</a>
                       </li>
                       <li>
-                        <a href="shop.html">Shop</a>
+                        <a href="shop.html">Rooms</a>
                       </li>
                       <li>
-                        <a href="gallery.html">EasyBooking Gallery</a>
+                        <a href="gallery.html">Hotels</a>
                       </li>
                       <li>
                         <a href="location.html">Our Location</a>
@@ -525,14 +355,14 @@
                 </div>
               </div>
               <!-- WIDGET -->
-              <div class="col-md-3">
+              <div class="col-md-4">
                 <div class="footer-widget">
                   <h3>Contact Info</h3>
                   <div class="inner">
                     <ul class="contact-details">
                       <li>
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        Lorem ipsum dolor, 25, EasyBooking</li>
+                        Ecole Supérieure de Technologie d'Agadir B.P 33/S, Agadir 80000</li>
                       <li>
                         <i class="fa fa-phone" aria-hidden="true"></i>
                         Phone: +212600000000
@@ -636,6 +466,12 @@
 
 
 
+    
 
+
+    <script src="styling/cart/assets/js/main.js"></script>
+
+
+    @livewireScripts
     </body>
 </html>

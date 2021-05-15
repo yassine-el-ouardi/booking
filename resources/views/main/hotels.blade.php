@@ -9,12 +9,12 @@
     background-size: cover;">
         <div class="container">
           <div class="inner">
-            <h1>HOTELS</h1>
+            <h1>SEARCH</h1>
             <ol class="breadcrumb">
               <li>
                 <a href="index.html">Home</a>
               </li>
-              <li>Hotels</li>
+              <li>Search</li>
             </ol>
           </div>
         </div>

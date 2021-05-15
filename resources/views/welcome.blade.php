@@ -1,9 +1,11 @@
+@extends('layouts.main-layout')
 
-{{-- @foreach ($rooms as $room)
-    hotel : {{ $room->hotel->name }}
-@endforeach --}}
+@section('body')
+    @foreach (App\Http\Controllers\CartController::index() as $room)
+{{        $room->associatedModel->hotel->name}}
+    @endforeach
+{{-- {{ App\Http\Controllers\CartController::index() }} --}}
 
-{{-- @foreach ($hotels as $hotel)
-    name: {{ $hotel->name }}
-@endforeach --}}
+
+@endsection
 

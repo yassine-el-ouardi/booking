@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
 use App\Models\City;
 use App\Models\Hotel;
 use App\Models\Room;
@@ -18,9 +19,10 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         //
+        $rooms = Room::paginate(3);
         $cities = City::all()->pluck('ville');
 
-        return view('main.index',compact('cities'));
+        return view('main.index',compact('cities','rooms'));
 
 
     }
@@ -77,7 +79,7 @@ class HomeController extends Controller
 
     public function test(){
 
-        return Hotel::all();
+        return view('welcome');
     }
 
     public function roomdetails(Request $request){
@@ -98,4 +100,15 @@ class HomeController extends Controller
         return view('main.listingrooms',compact('rooms','N'));
     }
 
+
+    public function about(){
+
+        $rooms = Room::all()->count();
+        $hotels = Hotel::all()->count();
+        $bookings = Booking::all()->count();
+        $cities = City::all()->count();
+
+
+        return view('main.about',compact('rooms','hotels','bookings','cities'));
+    }
 }

@@ -1,5 +1,7 @@
 @extends('layouts.main-layout')
 
+@section('rooms','active')
+
 @section('body')
 
       <!-- ========== PAGE TITLE ========== -->
@@ -51,6 +53,16 @@
                     <i class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Free WiFi" data-original-title="WiFi"></i>
                     <i class="fa fa-television" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable channels" data-original-title="TV"></i>
                     <span>Max Guests: {{ $room->guestnumber }}</span>
+                    {{-- <form action="{{ route("add.cart") }}" method="post">
+                      @csrf --}}
+                    {{-- <input type="hidden" name="id" value={{ $room->id }}> --}}
+
+                      {{-- <button type="submit"><span>add</span></button> --}}
+
+                      @livewire('panel',['id'=> $room->id])
+
+                    {{-- </form> --}}
+
                   </div>
                 </div>
               </div>
@@ -59,6 +71,7 @@
                   <span class="price">{{ $room->price ?? '0$' }} / night</span>
                   <a href="room?id={{ $room->id }}" class="btn btn-sm">VIEW DETAILS</a>
                 </div>
+
               </div>
             </div>
           </div>

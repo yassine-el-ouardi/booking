@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Models\City;
 use App\Models\Guest;
@@ -42,8 +43,26 @@ Route::get('hotel',[HomeController::class,'hoteldetails']);
 
 Route::get('/contact',function(){
     return view('main.contact');
-});
+})->name('contact');
 
 Route::get('room',[HomeController::class,'roomdetails']);
 
-Route::get('rooms',[HomeController::class,'rooms']);
+Route::get('rooms',[HomeController::class,'rooms'])->name('rooms');
+
+Route::get('cart',function(){
+    return view('main.cart');
+});
+
+Route::get('about',[HomeController::class,'about'])->name('about');
+
+Route::get('location',function(){
+    return view('main.location');
+})->name('location');
+
+Route::match(['GET','POST'],'add',[CartController::class,'addRoomToCart'])->name('add.cart');
+
+Route::get('cart',[CartController::class,'index'])->name('cart');
+
+Route::get('test',[HomeController::class,'test']);
+
+Route::match(['GET','POST'],'remove',[CartController::class,'removeRoomFromCart'])->name('remove');

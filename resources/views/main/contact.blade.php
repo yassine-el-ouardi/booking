@@ -1,5 +1,7 @@
 @extends('layouts.main-layout')
 
+@section('contact','active')
+
 @section('body')
 <!-- ========== PAGE TITLE ========== -->
      <div class="page-title gradient-overlay op6" style="background: url(images/breadcrumb.jpg); background-repeat: no-repeat;
@@ -25,7 +27,7 @@
                  <h4>CONTACT US</h4>
                  <p class="section-subtitle">Let’s Talk</p>
                </div>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus sit, fugiat at in assumenda corrupti autem iste eveniet eaque vitae beatae tenetur, voluptatem eius. Numquam.</p>
+               <p>Contact us. Need assistance with your Booking? We'll get you the help you need. </p>
                <!-- CONTACT FORM -->
                <form id="contact-form" class="contact-form">
                  <div class="form-group">
@@ -61,23 +63,23 @@
                      <ul>
                        <li>
                          <a href="#">
-                           <i class="fa fa-map-marker"></i>Lorem ipsum dolor, 25, Himara</a>
+                           <i class="fa fa-map-marker"></i>EST d'Agadir B.P 33/S, Agadir 80000</a>
                        </li>
                        <li>
                          <a href="#">
-                           <i class="fa fa-envelope"></i>contact@hotelhimara.com</a>
+                           <i class="fa fa-envelope"></i>contact@easybooking.com</a>
                        </li>
                        <li>
                          <a href="#">
-                           <i class="fa fa-phone"></i>+1 888 123 4567</a>
+                           <i class="fa fa-phone"></i>+212600000000</a>
                        </li>
                        <li>
                          <a href="#">
-                           <i class="fa fa-fax"></i>+1 888 123 4567</a>
+                           <i class="fa fa-fax"></i>+212600000000</a>
                        </li>
                        <li>
                          <a href="#">
-                           <i class="fa fa-globe"></i>www.hotelhimara.com</a>
+                           <i class="fa fa-globe"></i>www.easybooking.com</a>
                        </li>
                      </ul>
                    </div>
