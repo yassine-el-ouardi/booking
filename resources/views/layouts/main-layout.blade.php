@@ -182,7 +182,18 @@
         </div>
       </header>
 
-      
+      @if (Session::get('success'))
+                    <div class="alert alert-success">
+                        {{ Session::get('success') }}
+                    </div>
+
+      @elseif (Session::get('fail'))
+      <div class="alert alert-fail">
+          {{ Session::get('fail') }}
+      </div>
+
+      @endif
+
 <div>
       @yield('body')
 </div>
@@ -206,8 +217,9 @@
       <a href="cart.html" class="btn btn-dark btn-hover-primary mb-30px">clear cart</a>
     </form> --}}
 
-    
-      <button href="checkout.html" class="btn btn-dark btn-hover-primary mb-30px">Pay</button>
+    <form action={{ route("make.payment") }}>
+      <button  class="btn btn-dark btn-hover-primary mb-30px">Pay</button>
+    </form>
   </div>
 </div>
 

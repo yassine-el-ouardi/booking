@@ -1,4 +1,12 @@
 
+.book button {
+  font-weight: 600;
+  background-color: #EDCB9A;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  margin-bottom: 20px;
+}
 
 
 
@@ -2117,6 +2125,8 @@ textarea {
   -webkit-appearance: none;
   -webkit-transition: .5s;
   transition: .5s;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .btn:hover, .btn:focus, .btn:active {

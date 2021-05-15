@@ -67,9 +67,14 @@
                   </div>
                 </div>
               
+              <div class="section-title sm">
+                <h4>BOOK THE ROOM</h4>
+                </div>
+              <div class="book">
+                @livewire('panel',['id'=> $room->id])
+                </div>
 
-
-
+              
               <div class="section-title sm">
                 <h4>Room SERVICES</h4>
                 <p class="section-subtitle">Same services for all rooms in this hotel</p>

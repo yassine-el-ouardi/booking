@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Booking;
 use App\Models\City;
 use App\Models\Hotel;
+use App\Models\Message;
 use App\Models\Room;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -111,4 +112,41 @@ class HomeController extends Controller
 
         return view('main.about',compact('rooms','hotels','bookings','cities'));
     }
+
+    public function sendMessage(Request $request){
+
+        $request->validate([
+            'name'=>'required',
+            'email'=>'required|email',
+            'phone'=>'required',
+            'subject'=>'required|min:10',
+            'message'=>'required|min:10'
+        ]);
+
+
+        $message = new Message($request->all());
+        $query = $message->save();
+
+        // return $request->all();
+
+        if($query){
+            return redirect()->route('home')->with([
+                'success' => 'Message sended'
+            ]);;
+        }else{
+            return redirect()->route('home')->with([
+                'fail' => 'something went wrong'
+            ]);;
+        }
+
+    }
+
+
+    public function hotels(){
+
+        $hotels = Hotel::paginate(3);
+        $N = Hotel::all()->count();
+    return view('main.listinghotels',compact('hotels','N'));
+}
+
 }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PaypalController;
 use App\Models\City;
 use App\Models\Guest;
 use App\Models\Reservationguest;
@@ -49,6 +50,10 @@ Route::get('room',[HomeController::class,'roomdetails']);
 
 Route::get('rooms',[HomeController::class,'rooms'])->name('rooms');
 
+Route::get('hotels',[HomeController::class,'hotels'])->name('hotels');
+
+
+
 Route::get('cart',function(){
     return view('main.cart');
 });
@@ -66,3 +71,13 @@ Route::get('cart',[CartController::class,'index'])->name('cart');
 Route::get('test',[HomeController::class,'test']);
 
 Route::match(['GET','POST'],'remove',[CartController::class,'removeRoomFromCart'])->name('remove');
+
+
+
+Route::get('/handle-payment', [PaypalController::class,'handlePayment'])->name('make.payment');
+Route::get('/cancel-payment', [PaypalController::class,'paymentCancel'])->name('cancel.payment');
+Route::get('/payment-success', [PaypalController::class,'paymentSuccess'])->name('success.payment');
+
+
+
+Route::post('send',[HomeController::class,'sendMessage'])->name('send');
