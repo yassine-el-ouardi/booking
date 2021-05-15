@@ -12,7 +12,6 @@
 - Execute `composer install` and `php artisan voyager:install` in your command line, to install all the packages used in the project
 - copy the `.exemple.env` file to the `.env` file and set database and paypal infos.
 - Use `php artisan key:generate`
-- Create and assign admin privileges to the user with the command: `php artisan voyager:admin your@email.com --create`
 - you can run the app with the `php artisan serve` command
 - Use the credentials email: `admin@admin.com` password: `password` to log in 127.0.0.1:8000/admin
 
