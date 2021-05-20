@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,17 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+
+Route::get('hotels', [ApiController::class, 'listHotelsInCity']);
+
+Route::get('hotels2', [ApiController::class, 'listHotelsInCity2']);
+
+Route::get('allhotels', [ApiController::class, 'listAllHotels']);
+
+Route::get('cities', [ApiController::class, 'getCities']);
+
+Route::get('room', [ApiController::class, 'RoomsFromHotel']);
+
+Route::get('city', [ApiController::class, 'listcity']);
