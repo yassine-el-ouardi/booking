@@ -74,10 +74,16 @@ Route::match(['GET','POST'],'remove',[CartController::class,'removeRoomFromCart'
 
 
 
-Route::get('/handle-payment', [PaypalController::class,'handlePayment'])->name('make.payment');
+Route::match(['GET','POST'],'/handle-payment', [PaypalController::class,'handlePayment'])->name('make.payment');
 Route::get('/cancel-payment', [PaypalController::class,'paymentCancel'])->name('cancel.payment');
 Route::get('/payment-success', [PaypalController::class,'paymentSuccess'])->name('success.payment');
 
 
 
+
 Route::post('send',[HomeController::class,'sendMessage'])->name('send');
+
+
+
+Route::get('/guestform',[HomeController::class,'paymentform'])->name('form');
+Route::match(['GET','POST'],'/guestsform',[HomeController::class,'submitpaymentform'])->name('form1');

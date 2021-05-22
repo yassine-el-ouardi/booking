@@ -217,8 +217,8 @@
       <a href="cart.html" class="btn btn-dark btn-hover-primary mb-30px">clear cart</a>
     </form> --}}
 
-    <form action={{ route("make.payment") }}>
-      <button  class="btn btn-dark btn-hover-primary mb-30px">Pay</button>
+    <form action={{ route("form") }}>
+      <button  class="btn btn-dark btn-hover-primary mb-30px">Book</button>
     </form>
   </div>
 </div>

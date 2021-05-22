@@ -4,11 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Booking;
 use App\Models\City;
+
+
+
+
 use App\Models\Hotel;
 use App\Models\Message;
+use App\Models\Reservationguest;
 use App\Models\Room;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class HomeController extends Controller
 {
@@ -17,6 +23,14 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+
+//     public function __construct(){
+//     $this->total = 0;
+
+// }
+
     public function index(Request $request)
     {
         //
@@ -148,5 +162,84 @@ class HomeController extends Controller
         $N = Hotel::all()->count();
     return view('main.listinghotels',compact('hotels','N'));
 }
+
+
+
+    public function paymentform(){
+
+        $cities = City::all()->pluck('ville');
+
+        return view('main.form',compact('cities'));
+    }
+
+    public function submitpaymentform(Request $request){
+
+
+                //---------------validation--------------
+                $request->validate([
+                    'firstname'=>'required',
+                    'lastname'=>'required',
+                    'address'=>'required',
+                    'codepostal'=>'required',
+                    'email'=>'required|email',
+                    'phone'=>'required',
+                    'city'=>'required',
+                    'booking-date'=>'required',
+                    'childrenguests'=>'required',
+                    'adultguests'=>'required'
+                ]);
+        
+                //---------------------------------------
+
+        $date = $request->input('booking-date');
+        $array = explode(" ",$date);
+        $from = Carbon::createFromFormat('d-m-Y',$array[0]);
+        $to = Carbon::createFromFormat('d-m-Y',$array[2]);
+        $days = $from->diffInDays($to);
+        $childrenguests = $request->input('childrenguests');     
+        $adultguests = $request->input('adultguests');
+        $N = $childrenguests+$adultguests;
+
+        Cache::put('N',$N);
+
+        Cache::put('from',$from);
+        Cache::put('to',$to);
+        Cache::put('from',$from);
+        Cache::put('days',$days);
+        
+        $total = 0;
+        foreach (\Cart::getContent() as $item) {
+
+            $total += $item['price'] * $days;
+        }
+
+        $cities = City::all()->pluck('ville');
+
+        Cache::put('total',$total);
+
+//-----------------------------------------
+        $mainguest = new Reservationguest();
+        $mainguest->firstname = $request->input('firstname');
+        $mainguest->lastname = $request->input('lastname');
+        $mainguest->address = $request->input('address');
+        $mainguest->codepostal = $request->input('codepostal');
+        $mainguest->phone = $request->input('phone');
+
+        $city = $request->input('city');
+
+        $mainguest->city_id = City::where('ville',$city)->get()->first()->id;
+
+        $query = $mainguest->save();
+        if($query){
+            return view('main.form1',compact('cities','N','total'))->with('success','You have been successfuly registred');
+        }else{
+            return back()->with('fail','something went wrong');
+        }
+
+
+    }
+
+
+
 
 }

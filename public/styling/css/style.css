@@ -1765,6 +1765,7 @@ label a {
   font-size: 13px;
   font-weight: 400;
   font-style: normal;
+  margin-top: 0px;
 }
 
 .form-control.bootstrap-select button .bs-caret {

@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Guest extends Model
 {
     use HasFactory;
+
+    public function reservationguest(){
+        return $this->belongsTo('App\Models\Reservationguest');
+    }
 }
