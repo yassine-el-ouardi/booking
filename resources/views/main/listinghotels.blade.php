@@ -32,12 +32,12 @@
                 <div class="room-list-item">
                   <div class="row">
                     <div class="col-lg-4">
-                        <a href="room.html"><img src={{ $hotel->drive_image ?? "styling/images/rooms/single/single1.jpg"}} class="img-fluid" alt="Image"></a>
+                        <a href="hotel?id={{ $hotel->id }}"><img src={{ $hotel->drive_image ?? "styling/images/rooms/single/single1.jpg"}} class="img-fluid" alt="Image"></a>
                     </div>
                     <div class="col-lg-5">
                       <div class="room-info">
                         <h3 class="room-title">
-                          <a href="room.html">{{ $hotel->name }}</a>
+                          <a href="hotel?id={{ $hotel->id }}">{{ $hotel->name }}</a>
                         </h3>
                         <span class="room-rates">
                             @for ($i = 0; $i < $hotel->stars ; $i++)

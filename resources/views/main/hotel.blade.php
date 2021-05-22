@@ -34,7 +34,7 @@
                   <!-- ITEM -->
                   <div class="item">
                       <a href="{{$hotel->drive_image ?? styling/images/rooms/single/single1.jpg }}">
-                        <img class="img-fluid" src="{{$hotel->drive_image ?? styling/images/rooms/single/single1.jpg }}" alt="Image">
+                        <img class="img-fluid1" src="{{$hotel->drive_image ?? styling/images/rooms/single/single1.jpg }}" alt="Image">
                       </a>
                   </div>
                   @foreach ($rooms as $room)
@@ -43,7 +43,7 @@
                   <div class="item">
                     <figure class="gradient-overlay-hover image-icon">
                       <a href="{{$room->drive_image ?? styling/images/rooms/single/single2.jpg }}">
-                        <img class="img-fluid" src="{{$room->drive_image ?? styling/images/rooms/single/single2.jpg }}" alt="Image">
+                        <img class="img-fluid1" src="{{$room->drive_image ?? styling/images/rooms/single/single2.jpg }}" alt="Image">
                       </a>
                   </div>
                     </figure>

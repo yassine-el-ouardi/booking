@@ -138,19 +138,22 @@ class HomeController extends Controller
         ]);
 
 
-        $message = new Message($request->all());
+        $message = new Message();
+        $message->name = $request->input('name');
+        $message->email = $request->input('email');
+        $message->phone = $request->input('phone');
+        $message->subject = $request->input('subject');
+        $message->message = $request->input('message');
         $query = $message->save();
 
         // return $request->all();
+        $rooms = Room::paginate(3);
+        $cities = City::all()->pluck('ville');
 
         if($query){
-            return redirect()->route('home')->with([
-                'success' => 'Message sended'
-            ]);;
+            return view('main.index',compact('cities','rooms'))->with('success','Message sended');
         }else{
-            return redirect()->route('home')->with([
-                'fail' => 'something went wrong'
-            ]);;
+            return back()->with('fail','something went wrong');
         }
 
     }

@@ -29,7 +29,7 @@
                </div>
                <p>Contact us. Need assistance with your Booking? We'll get you the help you need. </p>
                <!-- CONTACT FORM -->
-               <form  class="contact-form" method="POST" action={{ route('send') }}>
+               <form method="POST" action={{ route('send') }}>
                  <div class="form-group">
                    <input type="text" class="form-control" name="name" placeholder="Name" type="text">
                  </div>

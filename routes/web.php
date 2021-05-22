@@ -81,7 +81,7 @@ Route::get('/payment-success', [PaypalController::class,'paymentSuccess'])->name
 
 
 
-Route::post('send',[HomeController::class,'sendMessage'])->name('send');
+Route::match(['GET','POST'],'send',[HomeController::class,'sendMessage'])->name('send');
 
 
 
